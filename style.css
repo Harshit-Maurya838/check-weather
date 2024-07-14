@@ -21,11 +21,14 @@ a{
 .container{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 5px;
     background-image: url(images/Background.png);
+    background-size: auto;
 }
 
 nav{
@@ -42,7 +45,7 @@ nav{
     z-index: 100;
 }
 
-.card{
+.card, .card_2{
     width: 90%;
     max-width: 500px;
     /* height: 90%;
@@ -145,7 +148,7 @@ nav{
     color: rgb(244, 95, 95);
 }
 
-.more_detail_btn{
+.more_detail_btn,.back_btn{
     width: 100%;
     height: 50px;
     display: flex;
@@ -154,7 +157,8 @@ nav{
     display:none;
     padding: 12px 0;
 }
-.more_detail{
+.back_btn{display: inline-block;}
+.more_detail,.back{
     display: inline-block;
     width: 300px;
     height: 40px;
@@ -164,4 +168,19 @@ nav{
     background-color: rgb(255, 178, 34);
     cursor: pointer;
     align-content: center;
+}
+
+.weather_forecast{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.forecast > p{
+    font-size: 14px;
+    color: yellow;
+}
+
+.card_2{
+    display: none;
 }
