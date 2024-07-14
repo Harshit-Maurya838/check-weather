@@ -9,12 +9,14 @@ const wind = document.querySelector('.wind')
 const searchBox = document.querySelector('.search input')
 const searchBtn = document.querySelector('.search button')
 const WeatherIcon = document.querySelector('.weather_icon')
+const moreDetainBtn = document.querySelector(".more_detail_btn")
 
 const checkweather = async (city)=>{
     const response = await fetch(apiUrl + city);
     if(response.status == 404){
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
+        moreDetainBtn.style.display = "none";
     }else{
         let data = await response.json();
         cityName.innerText = data.name;
@@ -34,6 +36,7 @@ const checkweather = async (city)=>{
             WeatherIcon.src = "images/drizzle.png";
         }
         document.querySelector('.weather').style.display = 'block';
+        moreDetainBtn.style.display = 'inline-block';
         document.querySelector(".error").style.display = "none";
     }
 }
