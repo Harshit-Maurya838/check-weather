@@ -48,18 +48,15 @@ searchBtn.addEventListener("click", ()=>{
     checkweather(searchBox.value);
     user_city = searchBox.value;
     document.querySelector('.card_2').style.display = "none";
-    document.querySelector(".container").style.height = "100vh";
 })
 
 document.querySelector('.more_detail').addEventListener("click", ()=>{
     document.querySelector('.card_2').style.display = "block";
     getForecast();
-    document.querySelector(".container").style.height = "150vh";
 })
 
 document.querySelector(".back").addEventListener("click",()=>{
     document.querySelector('.card_2').style.display = "none";
-    document.querySelector(".container").style.height = "100vh";
 })
 
 

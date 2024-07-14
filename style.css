@@ -29,6 +29,7 @@ a{
     gap: 5px;
     background-image: url(images/Background.png);
     background-size: auto;
+    overflow: scroll;
 }
 
 nav{
@@ -46,6 +47,8 @@ nav{
 }
 
 .card, .card_2{
+    position: absolute;
+    top: 50px;
     width: 90%;
     max-width: 500px;
     /* height: 90%;
@@ -183,4 +186,7 @@ nav{
 
 .card_2{
     display: none;
+    position: absolute;
+    top: 630px;
 }
+
